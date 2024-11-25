@@ -12,7 +12,7 @@ document.getElementById('job-form').addEventListener('submit', async (event) => 
   console.log('form data ', data);
 
   try {
-    const response = await fetch("http://localhost:3000/create-job", {
+    const response = await fetch("https://salesautomators-firsttask.onrender.com/create-job", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ document.getElementById('job-form').addEventListener('submit', async (event) => 
     if (!response.ok) throw new Error('error creating job');
 
     const result = await response.json();
-    alert(`job created successfully!`);
+    alert(`job created successfully`);
 
   } catch (error) {
     console.error('error:', error);
